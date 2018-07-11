@@ -10,19 +10,19 @@ import UIKit
 
 class SearchViewController: YNSearchViewController {
 
-    fileprivate var topMargin:CGFloat = 60
+    fileprivate var topMargin:CGFloat = UIApplication.shared.statusBarFrame.size.height
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         if let navHeight = self.navigationController?.navigationBar.frame.size.height {
-            topMargin = navHeight + UIApplication.shared.statusBarFrame.size.height
+            topMargin = UIApplication.shared.statusBarFrame.size.height + navHeight
         }
-        setupData()
     }
     
-    func setupData() {
+    func setupData(_ categories: [String]) {
         let datas = realmHelper.realm().objects(Coindata.self)
+        // Realm is not collection type so we need to convert it again with `[Any]`type. This will find all string in our model and show us the results.
         var dataArray = [Any]()
         for data in datas {
             let searchModel = Coindata()
@@ -34,19 +34,13 @@ class SearchViewController: YNSearchViewController {
             searchModel.low = data.low
             dataArray.append(searchModel)
         }
-        
-        let distinctQuoteAssets = Set(realmHelper.realm().objects(Coindata.self).value(forKey: "quoteAsset") as! [String])
-        self.ynSerach.setCategories(value: Array(distinctQuoteAssets))
+        self.ynSerach.setCategories(value: categories)
         self.ynSearchinit(topMargin)
         
         self.ynSearchView.delegate = self
         self.initData(database: dataArray)
         
-//        self.ynSearchTextfieldView.frame.origin.y += topMargin
-//        self.ynSearchView.frame.origin.y += topMargin
-//        self.ynSearchView.frame.size.height -= topMargin
-        
-        self.ynSearchView.ynSearchListView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomTableViewCell")
+        self.ynSearchView.ynSearchListView.register(UINib(nibName: String(describing:CustomTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing:CustomTableViewCell.self))
         if self.ynSearchView.ynSearchMainView.searchHistoryLabel != nil {
             self.ynSearchView.ynSearchMainView.redrawSearchHistoryButtons()
         }
@@ -81,7 +75,7 @@ extension SearchViewController : YNSearchDelegate {
     }
     
     func ynSearchListView(_ ynSearchListView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = self.ynSearchView.ynSearchListView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as? CustomTableViewCell, let coinData = self.ynSearchView.ynSearchListView.searchResultDatabase[indexPath.row] as? Coindata else {return UITableViewCell()}
+        guard let cell = self.ynSearchView.ynSearchListView.dequeueReusableCell(withIdentifier: String(describing:CustomTableViewCell.self), for: indexPath) as? CustomTableViewCell, let coinData = self.ynSearchView.ynSearchListView.searchResultDatabase[indexPath.row] as? Coindata else {return UITableViewCell()}
             cell.quoteAssetLabel.text = coinData.quoteAsset
             cell.baseAssetLabel.text = "/"  + coinData.baseAsset
             cell.volumenLabel.text = "Vol " + coinData.volume

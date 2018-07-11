@@ -25,7 +25,8 @@ class CustomTableViewController: UITableViewController, Requestable {
     }
     
     func setup() {
-        self.title = "Markets"
+        self.title = HOMEPAGETITLE
+        self.tableView.register(UINib(nibName: String(describing:CustomTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing:CustomTableViewCell.self))
         initIndicatorView()
         initRefreshControl()
         initTabBar()
@@ -43,7 +44,7 @@ class CustomTableViewController: UITableViewController, Requestable {
     func initRefreshControl() {
         refreshControl = UIRefreshControl()
         tableView.addSubview(refreshControl!)
-        refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl?.attributedTitle = NSAttributedString(string: PULLTOREFRESH)
         refreshControl?.tintColor = UIColor.gray
         refreshControl?.addTarget(self, action: #selector(getData), for: .valueChanged)
     }
@@ -53,8 +54,7 @@ class CustomTableViewController: UITableViewController, Requestable {
         tabFrame.size.height = TABBARHEIGHT
         tabBar = UITabBar(frame: tabFrame)
         tabBar?.delegate = self
-        tabBar?.barTintColor = COLORBLACK
-        tabBar?.unselectedItemTintColor = UIColor.white
+        tabBar?.enableDarkMode()
     }
     
     override func didReceiveMemoryWarning() {
@@ -83,7 +83,7 @@ class CustomTableViewController: UITableViewController, Requestable {
     }
     
     func updateTabAndData() {
-        self.distinctQuoteAssets = Set(realmHelper.realm().objects(Coindata.self).value(forKey: "quoteAsset") as! [String])
+        self.distinctQuoteAssets = Set(realmHelper.realm().objects(Coindata.self).value(forKey: QUOTEASSETKEY) as! [String])
         guard let tabItems = self.getTabBarItems() else {return}
         self.tabBar?.setItems(tabItems, animated: false)
         if let tabItem = tabBar?.items?.first {
@@ -93,11 +93,9 @@ class CustomTableViewController: UITableViewController, Requestable {
     }
     
     func getTabBarItems() -> [UITabBarItem]? {
-        let tabItems = distinctQuoteAssets.map { (quote) -> UITabBarItem in
-            let tabItem = UITabBarItem(title: quote, image: nil, tag: 0)
-            tabItem.setTitleTextAttributes([NSAttributedStringKey.font: DEFAULTFONT as Any], for: .normal)
-            tabItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: TABBARITEMTITLEOFFSET)
-            tabItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor : COLORYELLOW], for: .highlighted)
+        let tabItems = distinctQuoteAssets.map { (quoteString) -> UITabBarItem in
+            let tabItem = UITabBarItem(title: quoteString, image: nil, tag: 0)
+            tabItem.enableDarkMode()
             return tabItem
         }
         return tabItems
@@ -105,10 +103,14 @@ class CustomTableViewController: UITableViewController, Requestable {
     
     
     func getFilteredCoinData(_ quote: String?) -> [Coindata]? {
-        guard let quote = quote, let results = realmHelper.getObjects(Coindata.self, filterString: "quoteAsset = '\(quote)'") else {
+        guard let quote = quote, let results = realmHelper.getObjects(Coindata.self, filterString: getFilterString(QUOTEASSETKEY, value: quote)) else {
             return nil
         }
         return Array(results)
+    }
+    
+    func getFilterString(_ key: String, value: String) -> String {
+        return "\(key) = '\(value)'"
     }
 
     // MARK: - Table view data source
@@ -122,7 +124,7 @@ class CustomTableViewController: UITableViewController, Requestable {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as? CustomTableViewCell, indexPath.row < coinsArray.count else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: String(describing:CustomTableViewCell.self), for: indexPath) as? CustomTableViewCell, indexPath.row < coinsArray.count else {return UITableViewCell()}
         let coinData = coinsArray[indexPath.row]
         cell.quoteAssetLabel.text = coinData.quoteAsset
         cell.baseAssetLabel.text = "/"  + coinData.baseAsset
@@ -143,14 +145,10 @@ class CustomTableViewController: UITableViewController, Requestable {
     // MARK: - User Actions
     
     @IBAction func searchButtonTapped(_ sender: UIBarButtonItem) {
-        openSearch()
-    }
-    
-    func openSearch() {
         let searchController = SearchViewController()
+        searchController.setupData(Array(distinctQuoteAssets))
         self.navigationController?.pushViewController(searchController, animated: true)
     }
-
 }
 
 // MARK: - Tab bar delegate
