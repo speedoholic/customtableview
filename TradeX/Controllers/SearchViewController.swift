@@ -7,17 +7,16 @@
 //
 
 import UIKit
-import YNSearch
 
 class SearchViewController: YNSearchViewController {
 
-    fileprivate var navBarHeight:CGFloat = 60
+    fileprivate var topMargin:CGFloat = 60
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         if let navHeight = self.navigationController?.navigationBar.frame.size.height {
-            navBarHeight = navHeight
+            topMargin = navHeight + UIApplication.shared.statusBarFrame.size.height
         }
         setupData()
     }
@@ -38,14 +37,14 @@ class SearchViewController: YNSearchViewController {
         
         let distinctQuoteAssets = Set(realmHelper.realm().objects(Coindata.self).value(forKey: "quoteAsset") as! [String])
         self.ynSerach.setCategories(value: Array(distinctQuoteAssets))
-        self.ynSearchinit()
+        self.ynSearchinit(topMargin)
         
         self.ynSearchView.delegate = self
         self.initData(database: dataArray)
         
-        self.ynSearchTextfieldView.frame.origin.y += navBarHeight
-        self.ynSearchView.frame.origin.y += navBarHeight
-        self.ynSearchView.frame.size.height -= navBarHeight
+//        self.ynSearchTextfieldView.frame.origin.y += topMargin
+//        self.ynSearchView.frame.origin.y += topMargin
+//        self.ynSearchView.frame.size.height -= topMargin
         
         self.ynSearchView.ynSearchListView.register(UINib(nibName: "CustomTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomTableViewCell")
         if self.ynSearchView.ynSearchMainView.searchHistoryLabel != nil {

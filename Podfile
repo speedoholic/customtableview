@@ -6,13 +6,10 @@ target 'TradeX' do
   use_frameworks!
 
   # Pods for TradeX
-  pod 'Alamofire', '~> 4.5'
   pod 'SwiftLint'
-  pod 'RealmSwift'
   pod 'ObjectMapper', '~> 3.3.0'
-  pod 'InstantSearch', '~> 2.0'
-  pod 'YNSearch'
-
+  pod 'Alamofire', '~> 4.5'
+  pod 'RealmSwift'
   target 'TradeXTests' do
     inherit! :search_paths
     # Pods for testing
