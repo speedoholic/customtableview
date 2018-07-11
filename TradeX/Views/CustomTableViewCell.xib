@@ -76,13 +76,13 @@
                     <constraint firstAttribute="bottom" secondItem="8PH-CC-FLj" secondAttribute="bottom" id="xl7-pC-5ae"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" red="0.058823529411764705" green="0.070588235294117646" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
                 <outlet property="baseAssetLabel" destination="Vt1-eY-x3b" id="qbI-EU-iDr"/>
                 <outlet property="decimalLabel" destination="JKx-dn-eAE" id="91h-7P-pPX"/>
                 <outlet property="priceLabel" destination="MST-j2-yYe" id="WWu-4H-hyo"/>
                 <outlet property="quoteAssetLabel" destination="fDg-IS-pQ4" id="STM-KD-RDs"/>
-                <outlet property="volumenLabel" destination="bh6-lK-hRS" id="GzM-Zf-7Te"/>
+                <outlet property="volumeLabel" destination="bh6-lK-hRS" id="GzM-Zf-7Te"/>
             </connections>
             <point key="canvasLocation" x="114" y="142"/>
         </tableViewCell>
