@@ -3,7 +3,6 @@
 //  ESV
 //
 //  Created by Kushal Ashok on 2/27/18.
-//  Copyright © 2018 Essex Lake Group. All rights reserved.
 //
 
 import Foundation

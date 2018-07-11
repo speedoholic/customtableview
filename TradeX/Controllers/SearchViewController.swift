@@ -3,7 +3,6 @@
 //  TradeX
 //
 //  Created by Kushal Ashok on 7/11/18.
-//  Copyright © 2018 tradex. All rights reserved.
 //
 
 import UIKit
@@ -11,6 +10,7 @@ import UIKit
 class SearchViewController: YNSearchViewController {
 
     fileprivate var topMargin:CGFloat = UIApplication.shared.statusBarFrame.size.height
+    var categories = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,9 +18,10 @@ class SearchViewController: YNSearchViewController {
         if let navHeight = self.navigationController?.navigationBar.frame.size.height {
             topMargin = UIApplication.shared.statusBarFrame.size.height + navHeight
         }
+        setupData()
     }
     
-    func setupData(_ categories: [String]) {
+    func setupData() {
         let datas = realmHelper.realm().objects(Coindata.self)
         // Realm is not collection type so we need to convert it again with `[Any]`type. This will find all string in our model and show us the results.
         var dataArray = [Any]()
@@ -34,7 +35,7 @@ class SearchViewController: YNSearchViewController {
             searchModel.low = data.low
             dataArray.append(searchModel)
         }
-        self.ynSerach.setCategories(value: categories)
+        self.ynSearch.setCategories(value: categories)
         self.ynSearchinit(topMargin)
         
         self.ynSearchView.delegate = self
@@ -78,7 +79,7 @@ extension SearchViewController : YNSearchDelegate {
         guard let cell = self.ynSearchView.ynSearchListView.dequeueReusableCell(withIdentifier: String(describing:CustomTableViewCell.self), for: indexPath) as? CustomTableViewCell, let coinData = self.ynSearchView.ynSearchListView.searchResultDatabase[indexPath.row] as? Coindata else {return UITableViewCell()}
             cell.quoteAssetLabel.text = coinData.quoteAsset
             cell.baseAssetLabel.text = "/"  + coinData.baseAsset
-            cell.volumenLabel.text = "Vol " + coinData.volume
+            cell.volumeLabel.text = "Vol " + coinData.volume
             cell.decimalLabel.text = coinData.high
             cell.priceLabel.text = "$ " + coinData.low
             return cell

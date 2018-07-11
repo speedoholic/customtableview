@@ -3,7 +3,6 @@
 //  TradeX
 //
 //  Created by Kushal Ashok on 7/11/18.
-//  Copyright © 2018 tradex. All rights reserved.
 //
 
 import UIKit

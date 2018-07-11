@@ -128,7 +128,7 @@ class CustomTableViewController: UITableViewController, Requestable {
         let coinData = coinsArray[indexPath.row]
         cell.quoteAssetLabel.text = coinData.quoteAsset
         cell.baseAssetLabel.text = "/"  + coinData.baseAsset
-        cell.volumenLabel.text = "Vol " + coinData.volume
+        cell.volumeLabel.text = "Vol " + coinData.volume
         cell.decimalLabel.text = coinData.high
         cell.priceLabel.text = "$ " + coinData.low
         return cell
@@ -146,7 +146,7 @@ class CustomTableViewController: UITableViewController, Requestable {
     
     @IBAction func searchButtonTapped(_ sender: UIBarButtonItem) {
         let searchController = SearchViewController()
-        searchController.setupData(Array(distinctQuoteAssets))
+        searchController.categories = Array(distinctQuoteAssets)
         self.navigationController?.pushViewController(searchController, animated: true)
     }
 }

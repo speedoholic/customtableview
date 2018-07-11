@@ -21,7 +21,7 @@ open class YNSearchViewController: UIViewController, UITextFieldDelegate {
     open var ynSearchTextfieldView: YNSearchTextFieldView!
     open var ynSearchView: YNSearchView!
     
-    open var ynSerach = YNSearch()
+    open var ynSearch = YNSearch()
 
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -77,7 +77,7 @@ open class YNSearchViewController: UIViewController, UITextFieldDelegate {
     open func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         guard let text = textField.text else { return true }
         if !text.isEmpty {
-            self.ynSerach.appendSearchHistories(value: text)
+            self.ynSearch.appendSearchHistories(value: text)
             self.ynSearchView.ynSearchMainView.redrawSearchHistoryButtons()
         }
         self.ynSearchTextfieldView.ynSearchTextField.endEditing(true)
