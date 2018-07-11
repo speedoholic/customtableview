@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import YNSearch
 
 class SearchViewController: YNSearchViewController {
 

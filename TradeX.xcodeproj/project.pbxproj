@@ -25,6 +25,22 @@
 		2B8D65F120F5C604003FD81E /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B8D65F020F5C604003FD81E /* CustomTableViewCell.xib */; };
 		2B8D65F920F5E0F7003FD81E /* UIAlertHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8D65F820F5E0F6003FD81E /* UIAlertHelper.swift */; };
 		2B8D65FB20F5E8B3003FD81E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8D65FA20F5E8B3003FD81E /* Constants.swift */; };
+		2B8D663920F606D7003FD81E /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2B8D662820F606D7003FD81E /* LICENSE */; };
+		2B8D663A20F606D7003FD81E /* YNSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8D662A20F606D7003FD81E /* YNSearch.swift */; };
+		2B8D663B20F606D7003FD81E /* YNSearch.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B8D662B20F606D7003FD81E /* YNSearch.xcassets */; };
+		2B8D663C20F606D7003FD81E /* YNSearchListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8D662C20F606D7003FD81E /* YNSearchListView.swift */; };
+		2B8D663D20F606D7003FD81E /* YNSearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8D662D20F606D7003FD81E /* YNSearchDelegate.swift */; };
+		2B8D663E20F606D7003FD81E /* YNSearchHistoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8D662E20F606D7003FD81E /* YNSearchHistoryButton.swift */; };
+		2B8D663F20F606D7003FD81E /* YNSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8D662F20F606D7003FD81E /* YNSearchViewController.swift */; };
+		2B8D664020F606D7003FD81E /* YNSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8D663020F606D7003FD81E /* YNSearchView.swift */; };
+		2B8D664120F606D7003FD81E /* YNSearchListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8D663120F606D7003FD81E /* YNSearchListViewCell.swift */; };
+		2B8D664220F606D7003FD81E /* YNSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8D663220F606D7003FD81E /* YNSearchModel.swift */; };
+		2B8D664320F606D7003FD81E /* Objectification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8D663320F606D7003FD81E /* Objectification.swift */; };
+		2B8D664420F606D7003FD81E /* YNSearchMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8D663420F606D7003FD81E /* YNSearchMainView.swift */; };
+		2B8D664520F606D7003FD81E /* YNSearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8D663520F606D7003FD81E /* YNSearchTextField.swift */; };
+		2B8D664620F606D7003FD81E /* YNSearchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8D663620F606D7003FD81E /* YNSearchExtension.swift */; };
+		2B8D664720F606D7003FD81E /* YNCategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8D663720F606D7003FD81E /* YNCategoryButton.swift */; };
+		2B8D664820F606D7003FD81E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2B8D663820F606D7003FD81E /* README.md */; };
 		78350A48BA92F0733A57A2CC /* Pods_TradeXUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE57F2A2A057A8A19BD1C11E /* Pods_TradeXUITests.framework */; };
 		8A62DFA4A2B6FE279318AF91 /* Pods_TradeX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF8E53647AFAF3E952CE2995 /* Pods_TradeX.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +88,22 @@
 		2B8D65F020F5C604003FD81E /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		2B8D65F820F5E0F6003FD81E /* UIAlertHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertHelper.swift; sourceTree = "<group>"; };
 		2B8D65FA20F5E8B3003FD81E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2B8D662820F606D7003FD81E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		2B8D662A20F606D7003FD81E /* YNSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearch.swift; sourceTree = "<group>"; };
+		2B8D662B20F606D7003FD81E /* YNSearch.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = YNSearch.xcassets; sourceTree = "<group>"; };
+		2B8D662C20F606D7003FD81E /* YNSearchListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchListView.swift; sourceTree = "<group>"; };
+		2B8D662D20F606D7003FD81E /* YNSearchDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchDelegate.swift; sourceTree = "<group>"; };
+		2B8D662E20F606D7003FD81E /* YNSearchHistoryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchHistoryButton.swift; sourceTree = "<group>"; };
+		2B8D662F20F606D7003FD81E /* YNSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchViewController.swift; sourceTree = "<group>"; };
+		2B8D663020F606D7003FD81E /* YNSearchView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchView.swift; sourceTree = "<group>"; };
+		2B8D663120F606D7003FD81E /* YNSearchListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchListViewCell.swift; sourceTree = "<group>"; };
+		2B8D663220F606D7003FD81E /* YNSearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchModel.swift; sourceTree = "<group>"; };
+		2B8D663320F606D7003FD81E /* Objectification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Objectification.swift; sourceTree = "<group>"; };
+		2B8D663420F606D7003FD81E /* YNSearchMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchMainView.swift; sourceTree = "<group>"; };
+		2B8D663520F606D7003FD81E /* YNSearchTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchTextField.swift; sourceTree = "<group>"; };
+		2B8D663620F606D7003FD81E /* YNSearchExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNSearchExtension.swift; sourceTree = "<group>"; };
+		2B8D663720F606D7003FD81E /* YNCategoryButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YNCategoryButton.swift; sourceTree = "<group>"; };
+		2B8D663820F606D7003FD81E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4ECDC8DDF9994EEAA4291A6A /* Pods_TradeXTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TradeXTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A54F586EC29C83A445BEECAA /* Pods-TradeX.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeX.release.xcconfig"; path = "Pods/Target Support Files/Pods-TradeX/Pods-TradeX.release.xcconfig"; sourceTree = "<group>"; };
 		AB74CECB3BB38FBBB934E92F /* Pods-TradeXUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TradeXUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TradeXUITests/Pods-TradeXUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -195,6 +227,7 @@
 		2B8D660120F5EC5D003FD81E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				2B8D662720F606D7003FD81E /* YNSearch */,
 				2B8D65FA20F5E8B3003FD81E /* Constants.swift */,
 				2B74180020F4DB980076B0FC /* ListTransform.swift */,
 				2B7417FC20F4D7CF0076B0FC /* Networkable.swift */,
@@ -210,6 +243,37 @@
 				2B4415FA20F4C57400CE12EC /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		2B8D662720F606D7003FD81E /* YNSearch */ = {
+			isa = PBXGroup;
+			children = (
+				2B8D662820F606D7003FD81E /* LICENSE */,
+				2B8D662920F606D7003FD81E /* YNSearch */,
+				2B8D663820F606D7003FD81E /* README.md */,
+			);
+			path = YNSearch;
+			sourceTree = "<group>";
+		};
+		2B8D662920F606D7003FD81E /* YNSearch */ = {
+			isa = PBXGroup;
+			children = (
+				2B8D662A20F606D7003FD81E /* YNSearch.swift */,
+				2B8D662B20F606D7003FD81E /* YNSearch.xcassets */,
+				2B8D662C20F606D7003FD81E /* YNSearchListView.swift */,
+				2B8D662D20F606D7003FD81E /* YNSearchDelegate.swift */,
+				2B8D662E20F606D7003FD81E /* YNSearchHistoryButton.swift */,
+				2B8D662F20F606D7003FD81E /* YNSearchViewController.swift */,
+				2B8D663020F606D7003FD81E /* YNSearchView.swift */,
+				2B8D663120F606D7003FD81E /* YNSearchListViewCell.swift */,
+				2B8D663220F606D7003FD81E /* YNSearchModel.swift */,
+				2B8D663320F606D7003FD81E /* Objectification.swift */,
+				2B8D663420F606D7003FD81E /* YNSearchMainView.swift */,
+				2B8D663520F606D7003FD81E /* YNSearchTextField.swift */,
+				2B8D663620F606D7003FD81E /* YNSearchExtension.swift */,
+				2B8D663720F606D7003FD81E /* YNCategoryButton.swift */,
+			);
+			path = YNSearch;
 			sourceTree = "<group>";
 		};
 		2DC5F382C383B75FE6FD9D66 /* Pods */ = {
@@ -346,7 +410,10 @@
 				2B4415FE20F4C57400CE12EC /* LaunchScreen.storyboard in Resources */,
 				2B4415FB20F4C57400CE12EC /* Assets.xcassets in Resources */,
 				2B8D65F120F5C604003FD81E /* CustomTableViewCell.xib in Resources */,
+				2B8D664820F606D7003FD81E /* README.md in Resources */,
 				2B4415F920F4C57400CE12EC /* Main.storyboard in Resources */,
+				2B8D663B20F606D7003FD81E /* YNSearch.xcassets in Resources */,
+				2B8D663920F606D7003FD81E /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,24 +460,16 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TradeX/Pods-TradeX-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/InstantSearch/InstantSearch.framework",
-				"${BUILT_PRODUCTS_DIR}/InstantSearchClient/InstantSearchClient.framework",
-				"${BUILT_PRODUCTS_DIR}/InstantSearchCore/InstantSearchCore.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/YNSearch/YNSearch.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InstantSearch.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InstantSearchClient.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/InstantSearchCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YNSearch.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -461,16 +520,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B7417EF20F4D4950076B0FC /* CustomTableViewController.swift in Sources */,
+				2B8D664220F606D7003FD81E /* YNSearchModel.swift in Sources */,
 				2B8D65FB20F5E8B3003FD81E /* Constants.swift in Sources */,
 				2B7417F720F4D5390076B0FC /* RealmHelper.swift in Sources */,
+				2B8D663F20F606D7003FD81E /* YNSearchViewController.swift in Sources */,
 				2B74180320F4E00A0076B0FC /* CustomTableViewCell.swift in Sources */,
+				2B8D663C20F606D7003FD81E /* YNSearchListView.swift in Sources */,
 				2B8D65EF20F5BFEC003FD81E /* SearchViewController.swift in Sources */,
 				2B4415F220F4C57300CE12EC /* AppDelegate.swift in Sources */,
+				2B8D663A20F606D7003FD81E /* YNSearch.swift in Sources */,
+				2B8D664120F606D7003FD81E /* YNSearchListViewCell.swift in Sources */,
+				2B8D663E20F606D7003FD81E /* YNSearchHistoryButton.swift in Sources */,
 				2B74180120F4DB980076B0FC /* ListTransform.swift in Sources */,
+				2B8D664620F606D7003FD81E /* YNSearchExtension.swift in Sources */,
 				2B8D65F920F5E0F7003FD81E /* UIAlertHelper.swift in Sources */,
 				2B7417FD20F4D7CF0076B0FC /* Networkable.swift in Sources */,
 				2B7417F120F4D4EB0076B0FC /* Coindata.swift in Sources */,
+				2B8D664520F606D7003FD81E /* YNSearchTextField.swift in Sources */,
+				2B8D664720F606D7003FD81E /* YNCategoryButton.swift in Sources */,
+				2B8D664420F606D7003FD81E /* YNSearchMainView.swift in Sources */,
 				2B7417FF20F4DB300076B0FC /* LiveData.swift in Sources */,
+				2B8D664320F606D7003FD81E /* Objectification.swift in Sources */,
+				2B8D664020F606D7003FD81E /* YNSearchView.swift in Sources */,
+				2B8D663D20F606D7003FD81E /* YNSearchDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,10 +719,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 95LYYRS5E7;
 				INFOPLIST_FILE = TradeX/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = custom.tableview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -666,10 +735,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 95LYYRS5E7;
 				INFOPLIST_FILE = TradeX/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = custom.tableview;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -686,11 +752,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9MDYGWYCMA;
 				INFOPLIST_FILE = TradeXTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tradex.TradeXTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -708,11 +770,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9MDYGWYCMA;
 				INFOPLIST_FILE = TradeXTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tradex.TradeXTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -729,11 +787,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9MDYGWYCMA;
 				INFOPLIST_FILE = TradeXUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tradex.TradeXUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -750,11 +804,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9MDYGWYCMA;
 				INFOPLIST_FILE = TradeXUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = tradex.TradeXUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
