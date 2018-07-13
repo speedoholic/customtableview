@@ -29,3 +29,11 @@ After successfull installation of Pods, open TradeX.xcworkspace
 DONE
 
 Note: You will need to change the bundle id / provisioning team for running the app on your own device.
+
+<table>
+  <tr>
+    <th>
+      <img src="Media/demo.gif" width="200"/>
+    </th>
+  </tr>
+</table>
